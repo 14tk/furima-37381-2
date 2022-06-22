@@ -12,7 +12,6 @@
 | first_name_kana    | string     | null: false                   |
 | family_name_kana   | string     | null: false                   |
 | birth              | date       | null: false                   |
-| order              | references | null: false                   |
 
 ### Association
 
@@ -33,12 +32,11 @@
 | area_id          | intenger   | null: false                   |
 | ship_day_id      | intenger   | null: false                   |
 | user             | references | null: false, foreign_key:true |
-| order            | references | null: false                   |
 
 ### Association
 
 - belongs_to :user
-- has_one :order
+- belongs_to :order
 - has_many :comments
 
 
