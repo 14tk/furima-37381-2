@@ -12,11 +12,12 @@
 | first_name_kana    | string     | null: false                   |
 | family_name_kana   | string     | null: false                   |
 | birth              | date       | null: false                   |
-| order              | references | null: false, foreign_key:true |
+| order              | references | null: false                   |
 
 ### Association
 
-- has_one :item
+- has_many :items
+- has_one :order
 - has_many :comments
 
 ## items テーブル
@@ -32,12 +33,12 @@
 | area_id          | intenger   | null: false                   |
 | ship_day_id      | intenger   | null: false                   |
 | user             | references | null: false, foreign_key:true |
-| order            | references | null: false, foreign_key:true |
+| order            | references | null: false                   |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :order
+- has_one :order
 - has_many :comments
 
 
