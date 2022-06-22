@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_one :order
+- has_many :orders
 - has_many :comments
 
 ## items テーブル
@@ -36,7 +36,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :order
+- has_one :order
 - has_many :comments
 
 
